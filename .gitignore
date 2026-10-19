@@ -1,0 +1,57 @@
+# ---------------------------------------------------------------
+# Segredos e configuracao local  (NUNCA versionar)
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+credentials*
+secrets*
+
+# ---------------------------------------------------------------
+# Documentos da base de conhecimento
+# Os PDFs reais ficam so na maquina de quem usa o projeto.
+# A unica excecao e o PDF de exemplo, ficticio, versionado de proposito.
+# ---------------------------------------------------------------
+base/*
+!base/.gitkeep
+!base/manual-exemplo.pdf
+
+# ---------------------------------------------------------------
+# Banco vetorial (gerado por criar_db.py, pode pesar centenas de MB)
+# ---------------------------------------------------------------
+db/
+*.sqlite3
+
+# ---------------------------------------------------------------
+# Arquivos gerados em tempo de execucao
+# ---------------------------------------------------------------
+*.pdf.tmp
+resposta*.pdf
+saida*.pdf
+
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------
+# Editores e sistema operacional
+# ---------------------------------------------------------------
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---------------------------------------------------------------
+# Historico de versoes do prototipo (desenvolvimento local)
+# ---------------------------------------------------------------
+backup_original/
